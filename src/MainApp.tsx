@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 
 function HomePage() {
   const navigate = useNavigate();
-
   return (
     <main className="p-6 space-y-6">
       <Card>
@@ -14,14 +13,13 @@ function HomePage() {
           <p className="mt-2 text-muted-foreground">نظام إدارة مالية متكامل</p>
         </CardContent>
       </Card>
-
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <Button className="text-lg py-6" onClick={() => navigate("/invoices")}>📦 الفواتير</Button>
-        <Button className="text-lg py-6" onClick={() => navigate("/clients")}>👥 العملاء</Button>
-        <Button className="text-lg py-6" onClick={() => navigate("/suppliers")}>🏬 الموردين</Button>
-        <Button className="text-lg py-6" onClick={() => navigate("/expenses")}>💸 المصروفات الشخصية</Button>
-        <Button className="text-lg py-6" onClick={() => navigate("/reports")}>📊 التقارير</Button>
-        <Button className="text-lg py-6" onClick={() => navigate("/create-invoice")}>📝 إنشاء فاتورة</Button>
+        <Button onClick={() => navigate("/invoices")}>📦 الفواتير</Button>
+        <Button onClick={() => navigate("/clients")}>👥 العملاء</Button>
+        <Button onClick={() => navigate("/suppliers")}>🏬 الموردين</Button>
+        <Button onClick={() => navigate("/expenses")}>💸 المصروفات</Button>
+        <Button onClick={() => navigate("/reports")}>📊 التقارير</Button>
+        <Button onClick={() => navigate("/create-invoice")}>📝 إنشاء فاتورة</Button>
       </div>
     </main>
   );
